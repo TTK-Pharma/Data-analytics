@@ -2,7 +2,6 @@
 
 <p align="center">
   <img src="https://img.shields.io/badge/Python-Data%20Analysis-blue?logo=python" />
-  <img src="https://img.shields.io/badge/SQL-Data%20Analysis-orange?logo=postgresql" />
   <img src="https://img.shields.io/badge/Pharmaceutical-QC-green" />
   <img src="https://img.shields.io/badge/Statistics-Analysis-purple" />
 </p>
@@ -26,7 +25,7 @@ The analysis focuses on data cleaning, validation, specification checks, OOS ide
 
 This project demonstrates a **pharmaceutical quality control (QC) analytics workflow** using a synthetic vaccine/biologics batch dataset.
 
-The analysis focuses on multiple analytical assays used to evaluate batch quality and demonstrates how laboratory assay results can be transformed into structured QC insights using **Python, SQL, statistical analysis, and data visualization**.
+The analysis focuses on multiple analytical assays used to evaluate batch quality and demonstrates how laboratory assay results can be transformed into structured QC insights using **Python, statistical analysis, and data visualization**.
 
 The project covers:
 
@@ -227,7 +226,7 @@ The following visualizations were created to examine assay distributions, variab
 </p>
 
 <p align="center">
-  <img src="Plots/HCP_ng_mLboxplot.png" width="700">
+  <img src="Plots/HCP_ng_mL_boxplot.png" width="700">
 </p>
 
 ### HCD – Host Cell DNA
@@ -237,7 +236,7 @@ The following visualizations were created to examine assay distributions, variab
 </p>
 
 <p align="center">
-  <img src="Plots/HCD_ng_mLboxplot.png" width="700">
+  <img src="Plots/HCD_ng_mL_boxplot.png" width="700">
 </p>
 
 ### BCA – Protein Concentration
@@ -247,7 +246,7 @@ The following visualizations were created to examine assay distributions, variab
 </p>
 
 <p align="center">
-  <img src="Plots/BCA_ug_mLboxplot.png" width="700">
+  <img src="Plots/BCA_ug_mL_boxplot.png" width="700">
 </p>
 
 ### D-Antigen
@@ -257,10 +256,46 @@ The following visualizations were created to examine assay distributions, variab
 </p>
 
 <p align="center">
-  <img src="Plots/D-Ag_DU_mLboxplot.png" width="700">
+  <img src="Plots/D-Ag_DU_mL_boxplot.png" width="700">
 </p>
-> **Important:** A statistical outlier is not automatically an OOS result.
 
 Outlier detection was performed as an additional analytical step to identify unusual observations that may warrant further investigation.
 
 Specification limits were used separately to determine **OOS status**, while statistical outlier detection was used to examine unusual patterns within the assay data.
+
+## 📁 Repository Structure
+
+```text
+QC-Batch-Analytics/
+│
+├── 📂 Plots/
+│   ├── BCA.png
+│   ├── BCA_ug_mL_boxplot.png
+│   ├── D-Ag.png
+│   ├── D-Ag_DU_mL_boxplot.png
+│   ├── HCD.png
+│   ├── HCD_ng_mL_boxplot.png
+│   ├── HCP.png
+│   └── HCP_ng_mL_boxplot.png
+│
+├── 📄 Data.py
+├── 📊 Outlier.xlsx
+├── 📖 README.md
+├── 📊 Summary.xlsx
+└── 📄 final_Dataset.xlsx
+```
+## ⚠️ Disclaimer
+
+This project uses **synthetic data created for educational and portfolio purposes**.
+
+The assay values, specification limits, batch results, and statistical outputs do not represent real pharmaceutical manufacturing data or actual product release criteria.
+
+The project is intended to demonstrate **pharmaceutical QC data analytics, statistical analysis, and programming skills**.
+
+---
+
+<p align="center">
+
+### 🧪 Pharmaceutical QC × 📊 Data Analytics × 💻 Programming
+
+</p>
