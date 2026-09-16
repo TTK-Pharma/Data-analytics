@@ -77,3 +77,23 @@ Batch_ID
 ├── D_Ag_Status
 │
 └── Overall_Status
+
+                 VACCINE / BIOLOGICS BATCH
+                          │
+          ┌───────────────┼───────────────┐
+          │               │               │
+         HCP             HCD             BCA
+          │               │               │
+          └───────────────┼───────────────┘
+                          │
+                     D-Antigen
+                          │
+                          ▼
+                 Specification Check
+                          │
+              ┌───────────┴───────────┐
+              │                       │
+             PASS                   OOS
+              │                       │
+              ▼                       ▼
+        Batch Evaluation          Review
