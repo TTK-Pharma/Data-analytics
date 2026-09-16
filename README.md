@@ -77,23 +77,36 @@ Batch_ID
 ├── D_Ag_Status
 │
 └── Overall_Status
+---
 
-                 VACCINE / BIOLOGICS BATCH
-                          │
-          ┌───────────────┼───────────────┐
-          │               │               │
-         HCP             HCD             BCA
-          │               │               │
-          └───────────────┼───────────────┘
-                          │
-                     D-Antigen
-                          │
-                          ▼
-                 Specification Check
-                          │
-              ┌───────────┴───────────┐
-              │                       │
-             PASS                   OOS
-              │                       │
-              ▼                       ▼
-        Batch Evaluation          Review
+## 🔄 Analytical Workflow
+
+```text
+🧪 Synthetic QC Dataset
+          │
+          ▼
+🧹 Data Cleaning & Validation
+          │
+          ▼
+📏 Specification Checks
+          │
+          ▼
+⚠️ OOS Identification
+          │
+          ▼
+📦 Batch-Level Classification
+          │
+          ▼
+📊 Descriptive Statistics
+          │
+          ▼
+🚨 Outlier Detection
+          │
+          ▼
+📈 Distribution Analysis
+          │
+          ▼
+💡 QC Data Interpretation
+
+🛠️ Tools & Technologies
+<p align="center"> <img src="https://img.shields.io/badge/Python-Pandas%20%7C%20NumPy%20%7C%20Matplotlib-blue?logo=python" /> <img src="https://img.shields.io/badge/SQL-Data%20Querying-orange?logo=postgresql" /> <img src="https://img.shields.io/badge/Excel-Data%20Handling-green?logo=microsoftexcel" /> </p>
