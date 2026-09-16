@@ -123,6 +123,7 @@ Batch_ID
 | 🐼 **Pandas** | Data manipulation and analysis |
 | 🔢 **NumPy** | Numerical calculations and data generation |
 | 📊 **Matplotlib** | Assay visualization and distribution analysis |
+| 🗃️ **SQL** | Data querying and analytical calculations |
 | 📗 **Excel** | Dataset preparation and analytical outputs |
 | 📐 **Statistical Analysis** | Mean, median, standard deviation, CV%, skewness and outlier analysis |
 
@@ -142,8 +143,6 @@ The analysis classified the 50 batches based on the specification status of all 
 
 A batch was classified as **Review** when one or more assay results were outside the defined specification criteria.
 
----
-
 ### Assay-Level Specification Results
 
 | Assay | Pass | OOS |
@@ -152,6 +151,7 @@ A batch was classified as **Review** when one or more assay results were outside
 | **HCD** | 48 | 2 |
 | **BCA** | 47 | 3 |
 | **D-Antigen** | 48 | 2 |
+
 ---
 
 ## ⚠️ OOS Analysis
@@ -180,125 +180,11 @@ For example:
 
 ```text
 Batch B008
-     │
-     ├── HCP       → 🔴 OOS
-     ├── HCD       → 🟢 Pass
-     ├── BCA       → 🟢 Pass
-     └── D-Antigen → 🟢 Pass
+    │
+    ├── HCP       → 🔴 OOS
+    ├── HCD       → 🟢 Pass
+    ├── BCA       → 🟢 Pass
+    └── D-Antigen → 🟢 Pass
                        │
                        ▼
                   🟠 REVIEW
-
----
-
-## 📈 Statistical Analysis
-
-Descriptive statistical analysis was performed to understand the **central tendency, variability, and distribution characteristics** of each assay.
-
-| Assay | Mean | Median | Standard Deviation | CV% | Skewness |
-|---|---:|---:|---:|---:|---:|
-| **HCP** | 25.54 | 19.80 | 22.56 | 88.31% | 4.52 |
-| **HCD** | 349.26 | 290.56 | 194.81 | 55.78% | 2.14 |
-| **BCA** | 522.53 | 510.03 | 82.62 | 15.81% | 1.77 |
-| **D-Antigen** | 2.89 | 2.98 | 0.64 | 22.23% | -1.77 |
-
-### Statistical Measures Used
-
-- **Mean** – Represents the average assay result across batches.
-- **Median** – Represents the middle observation after ordering the assay results.
-- **Standard Deviation (SD)** – Measures the variability of assay results around the mean.
-- **Coefficient of Variation (CV%)** – Measures relative variability between assay measurements.
-- **Skewness** – Describes the asymmetry of the assay data distribution.
----
-
-## 🚨 Outlier Analysis
-
-Statistical outlier analysis identified **12 potential outlier observations** across the four assays.
-
-> **Important:** A statistical outlier is not automatically an OOS result.
-
-Outlier detection was used as an additional analytical step to identify unusual observations for further investigation, while **specification limits were used separately for OOS classification**.
-
----
-
-## 📊 Data Visualizations
-
-The following visualizations were created to examine assay distributions, variability, and potential unusual observations across batches.
-
-### HCP – Host Cell Protein
-
-<p align="center">
-  <img src="plots/HCP.png" width="700">
-</p>
-
-<p align="center">
-  <img src="plots/HCP_ng_mL_boxplot.png" width="700">
-</p>
-
----
-
-### HCD – Host Cell DNA
-
-<p align="center">
-  <img src="plots/HCD.png" width="700">
-</p>
-
-<p align="center">
-  <img src="plots/HCD_ng_mL_boxplot.png" width="700">
-</p>
-
----
-
-### BCA – Protein Concentration
-
-<p align="center">
-  <img src="plots/BCA.png" width="700">
-</p>
-
-<p align="center">
-  <img src="plots/BCA_ug_mL_boxplot.png" width="700">
-</p>
-
----
-
-### D-Antigen
-
-<p align="center">
-  <img src="plots/D-Ag.png" width="700">
-</p>
-
-<p align="center">
-  <img src="plots/D-Ag_DU_mL_boxplot.png" width="700">
-</p>
----
-
-## 📁 Repository Structure
-
-```text
-QC-Batch-Analytics/
-│
-├── 📂 Plots/
-│   ├── BCA.png
-│   ├── BCA_ug_mL boxplot.png
-│   ├── D-Ag.png
-│   ├── D-Ag_DU_mL boxplot.png
-│   ├── HCD.png
-│   ├── HCD_ng_mL boxplot.png
-│   ├── HCP.png
-│   └── HCP_ng_mL boxplot.png
-│
-├── 📄 Data.py
-├── 📊 Outlier.xlsx
-├── 📖 README.md
-├── 📊 Summary.xlsx
-└── 📄 final_Dataset.xlsx
-
----
-
-## ⚠️ Disclaimer
-
-This project uses **synthetic data created for educational and portfolio purposes**.
-
-The assay values, specification limits, batch results, and statistical outputs do not represent real pharmaceutical manufacturing data or actual product release criteria.
-
-The project is intended to demonstrate **pharmaceutical QC data analytics, statistical analysis, and programming skills**.
