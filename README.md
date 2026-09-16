@@ -227,7 +227,7 @@ The following visualizations were created to examine assay distributions, variab
 </p>
 
 <p align="center">
-  <img src="Plots/HCP_ng_mL_boxplot.png" width="700">
+  <img src="Plots/HCP_ng_mLboxplot.png" width="700">
 </p>
 
 ### HCD – Host Cell DNA
@@ -237,7 +237,7 @@ The following visualizations were created to examine assay distributions, variab
 </p>
 
 <p align="center">
-  <img src="Plots/HCD_ng_mL_boxplot.png" width="700">
+  <img src="Plots/HCD_ng_mLboxplot.png" width="700">
 </p>
 
 ### BCA – Protein Concentration
@@ -247,7 +247,7 @@ The following visualizations were created to examine assay distributions, variab
 </p>
 
 <p align="center">
-  <img src="Plots/BCA_ug_mL_boxplot.png" width="700">
+  <img src="Plots/BCA_ug_mLboxplot.png" width="700">
 </p>
 
 ### D-Antigen
@@ -257,7 +257,7 @@ The following visualizations were created to examine assay distributions, variab
 </p>
 
 <p align="center">
-  <img src="Plots/D-Ag_DU_mL_boxplot.png" width="700">
+  <img src="Plots/D-Ag_DU_mLboxplot.png" width="700">
 </p>
 > **Important:** A statistical outlier is not automatically an OOS result.
 
