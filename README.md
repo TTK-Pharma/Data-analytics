@@ -77,6 +77,7 @@ Batch_ID
 ├── D_Ag_Status
 │
 └── Overall_Status
+```
 ---
 
 ## 🔄 Analytical Workflow
@@ -107,6 +108,7 @@ Batch_ID
           │
           ▼
 💡 QC Data Interpretation
+```
 
 ## 🛠️ Tools & Technologies
 
@@ -126,7 +128,6 @@ Batch_ID
 | 🗃️ **SQL** | Data querying and analytical calculations |
 | 📗 **Excel** | Dataset preparation and analytical outputs |
 | 📐 **Statistical Analysis** | Mean, median, standard deviation, CV%, skewness and outlier analysis |
-
 ---
 
 ## 📊 Key Results
@@ -175,10 +176,9 @@ A total of **9 OOS assay observations** were identified across the 50 synthetic 
 ### Batch-Level Interpretation
 
 If **any individual assay** in a batch was classified as OOS, the overall batch status was classified as **Review**.
+#### Example: Batch B008
 
-For example:
-
-```text
+<pre>
 Batch B008
     │
     ├── HCP       → 🔴 OOS
@@ -188,3 +188,79 @@ Batch B008
                        │
                        ▼
                   🟠 REVIEW
+</pre>
+---
+
+## 📈 Statistical Analysis
+
+Descriptive statistical analysis was performed to understand the **central tendency, variability, and distribution characteristics** of each assay.
+
+| Assay | Mean | Median | Standard Deviation | CV% | Skewness |
+|---|---:|---:|---:|---:|---:|
+| **HCP** | 25.54 | 19.80 | 22.56 | 88.31% | 4.52 |
+| **HCD** | 349.26 | 290.56 | 194.81 | 55.78% | 2.14 |
+| **BCA** | 522.53 | 510.03 | 82.62 | 15.81% | 1.77 |
+| **D-Antigen** | 2.89 | 2.98 | 0.64 | 22.23% | -1.77 |
+
+### Statistical Measures Used
+
+- **Mean** – Average assay result across the batches.
+- **Median** – Middle value of the ordered observations.
+- **Standard Deviation (SD)** – Measures the variability of assay results.
+- **Coefficient of Variation (CV%)** – Measures relative variability.
+- **Skewness** – Describes the asymmetry of the data distribution.
+
+---
+
+## 🚨 Outlier Analysis
+
+Statistical outlier analysis identified **12 potential outlier observations** across the four assays.
+
+## 📊 Data Visualizations
+
+The following visualizations were created to examine assay distributions, variability, and potential unusual observations across batches.
+
+### HCP – Host Cell Protein
+
+<p align="center">
+  <img src="Plots/HCP.png" width="700">
+</p>
+
+<p align="center">
+  <img src="Plots/HCP_ng_mL_boxplot.png" width="700">
+</p>
+
+### HCD – Host Cell DNA
+
+<p align="center">
+  <img src="Plots/HCD.png" width="700">
+</p>
+
+<p align="center">
+  <img src="Plots/HCD_ng_mL_boxplot.png" width="700">
+</p>
+
+### BCA – Protein Concentration
+
+<p align="center">
+  <img src="Plots/BCA.png" width="700">
+</p>
+
+<p align="center">
+  <img src="Plots/BCA_ug_mL_boxplot.png" width="700">
+</p>
+
+### D-Antigen
+
+<p align="center">
+  <img src="Plots/D-Ag.png" width="700">
+</p>
+
+<p align="center">
+  <img src="Plots/D-Ag_DU_mL_boxplot.png" width="700">
+</p>
+> **Important:** A statistical outlier is not automatically an OOS result.
+
+Outlier detection was performed as an additional analytical step to identify unusual observations that may warrant further investigation.
+
+Specification limits were used separately to determine **OOS status**, while statistical outlier detection was used to examine unusual patterns within the assay data.
